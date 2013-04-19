@@ -57,17 +57,17 @@ sayNumber n | n == 0    = "nula"
 
 sayNumber' :: Int -> String
 sayNumber' n | n `mod` 10 == 0 = sayTens n
-            | n `div` 10 == 0 = sayNumber n
-            | n `div` 10 == 1 = sayTeens n
-            | n `div` 10 == 2 = "dvadeset i " ++ (sayNumber $ mod n 10)
-            | n `div` 10 == 3 = "trideset i " ++ (sayNumber $ mod n 10)
-            | n `div` 10 == 4 = "cetrdeset i " ++ (sayNumber $ mod n 10)
-            | n `div` 10 == 5 = "pedeset i " ++ (sayNumber $ mod n 10)
-            | n `div` 10 == 6 = "sezdeset i " ++ (sayNumber $ mod n 10)
-            | n `div` 10 == 7 = "sedamdeset i " ++ (sayNumber $ mod n 10)
-            | n `div` 10 == 8 = "osamdeset i " ++ (sayNumber $ mod n 10)
-            | n `div` 10 == 9 = "devedeset i " ++ (sayNumber $ mod n 10)
-            | otherwise       = "nezz"
+             | n `div` 10 == 0 = sayNumber n
+             | n `div` 10 == 1 = sayTeens n
+             | n `div` 10 == 2 = "dvadeset i " ++ (sayNumber $ mod n 10)
+             | n `div` 10 == 3 = "trideset i " ++ (sayNumber $ mod n 10)
+             | n `div` 10 == 4 = "cetrdeset i " ++ (sayNumber $ mod n 10)
+             | n `div` 10 == 5 = "pedeset i " ++ (sayNumber $ mod n 10)
+             | n `div` 10 == 6 = "sezdeset i " ++ (sayNumber $ mod n 10)
+             | n `div` 10 == 7 = "sedamdeset i " ++ (sayNumber $ mod n 10)
+             | n `div` 10 == 8 = "osamdeset i " ++ (sayNumber $ mod n 10)
+             | n `div` 10 == 9 = "devedeset i " ++ (sayNumber $ mod n 10)
+             | otherwise       = "nezz"
 
 sayTens :: Int -> String
 sayTens n | n == 10 = "deset"
@@ -181,4 +181,4 @@ hasRep xs = not $ xs == nub xs
   malim slovima. Hint: koristite 'nub' i 'sort'.
 -}
 pangram  :: String -> Bool
-pangram s = (sort . nub)  s == ['a'..'z']
+pangram s = (sort . nub) s == ['a'..'z']
